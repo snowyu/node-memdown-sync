@@ -1,15 +1,15 @@
 {
-  "name": "memdown",
-  "description": "An drop-in replacement for LevelDOWN that works in memory only",
+  "name": "memdown-sync",
+  "description": "An drop-in replacement for LevelDOWN that works in memory only with sync supports",
   "version": "1.0.0",
-  "homepage": "https://github.com/rvagg/node-memdown",
-  "authors": [
-    "Rod Vagg <rod@vagg.org> (https://github.com/rvagg)"
-  ],
+  "homepage": "https://github.com/snowyu/node-memdown-sync",
   "contributors": [
+    "Riceball LEE <snowyu.lee@gmail.com> (https://github.com/snowyu)",
+    "Rod Vagg <rod@vagg.org> (https://github.com/rvagg)",
     "Julian Gruber <julian@juliangruber.com> (https://github.com/juliangruber)"
   ],
   "keywords": [
+    "nosql",
     "leveldb",
     "leveldown",
     "levelup",
@@ -18,13 +18,13 @@
   "main": "./memdown.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rvagg/node-memdown.git"
+    "url": "https://github.com/snowyu/node-memdown-sync.git"
   },
   "dependencies": {
     "inherits": "~2.0.1",
     "ltgt": "~1.0.2",
     "functional-red-black-tree": "^1.0.1",
-    "abstract-leveldown": "^2.0.3"
+    "abstract-nosql": "^1.0.1"
   },
   "devDependencies": {
     "tape": "*",
