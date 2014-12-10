@@ -13,6 +13,8 @@ require('abstract-nosql/abstract/open-test').open(MemDOWN, test, testCommon)
 
 require('abstract-nosql/abstract/del-test').all(MemDOWN, test, testCommon)
 
+require('abstract-nosql/abstract/isExists-test').all(MemDOWN, test, testCommon)
+
 require('abstract-nosql/abstract/get-test').all(MemDOWN, test, testCommon)
 
 require('abstract-nosql/abstract/put-test').all(MemDOWN, test, testCommon)

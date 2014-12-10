@@ -174,6 +174,18 @@ MemDOWN.prototype._put = function (key, value, options, callback) {
   setImmediate(callback)
 }
 
+MemDOWN.prototype._isExistsSync = function (key, options) {
+  var result = this._store[this._location].get(key)
+
+  if (result === undefined) {
+    result = false
+  } else {
+    result = true
+  }
+
+  return result
+}
+
 MemDOWN.prototype._getSync = function (key, options) {
   var value = this._store[this._location].get(key)
 
