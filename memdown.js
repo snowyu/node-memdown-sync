@@ -305,9 +305,13 @@ MemDOWN.prototype._batch = function (array, options, callback) {
   setImmediate(callback)
 }
 
+MemDOWN.prototype.IteratorClass = MemIterator
+
+/*
 MemDOWN.prototype._iterator = function (options) {
   return new MemIterator(this, options)
 }
+*/
 
 MemDOWN.prototype._isBuffer = function (obj) {
   return Buffer.isBuffer(obj)
