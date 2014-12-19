@@ -36,8 +36,8 @@ function MemIterator (db, options) {
 
   var tree = db._store[db._location];
 
-  this.keyAsBuffer = options.keyAsBuffer !== false
-  this.valueAsBuffer = options.valueAsBuffer !== false
+  this.keyAsBuffer = options.keyAsBuffer === true
+  this.valueAsBuffer = options.valueAsBuffer === true
   this._reverse   = options.reverse
   this._options = options
   this._done = 0
@@ -195,7 +195,7 @@ MemDOWN.prototype._getSync = function (key, options) {
     throw err
   }
 
-  if (options.asBuffer !== false && !this._isBuffer(value))
+  if (options.asBuffer === true && !this._isBuffer(value))
     value = new Buffer(String(value))
   
   return value
@@ -210,7 +210,7 @@ MemDOWN.prototype._get = function (key, options, callback) {
     return setImmediate(function callNext() { callback(err) })
   }
 
-  if (options.asBuffer !== false && !this._isBuffer(value))
+  if (options.asBuffer === true && !this._isBuffer(value))
     value = new Buffer(String(value))
   
   setImmediate(function callNext () {
