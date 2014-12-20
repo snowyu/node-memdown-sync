@@ -47,8 +47,10 @@ function MemIterator (db, options) {
     this._start = ltgt.lowerBound(options);
     this._endValue = ltgt.upperBound(options)
     
-    if (typeof this._start === 'undefined')
+    if (typeof this._start === 'undefined') {
       this._tree = tree.begin;
+      if (options.gt === null) this._tree.next()
+    }
     else if (ltgt.lowerBoundInclusive(options))
       this._tree = tree.ge(this._start);
     else
@@ -66,8 +68,10 @@ function MemIterator (db, options) {
     this._start = ltgt.upperBound(options)
     this._endValue = ltgt.lowerBound(options)
   
-    if (typeof this._start === 'undefined')
+    if (typeof this._start === 'undefined') {
       this._tree = tree.end;
+      if (options.lt === null) this._tree.prev()
+    }
     else if (ltgt.upperBoundInclusive(options))
       this._tree = tree.le(this._start)
     else
