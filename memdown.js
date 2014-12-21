@@ -28,7 +28,7 @@ function lte(value) {
 
 
 function MemIterator (db, options) {
-  AbstractIterator.call(this, db)
+  AbstractIterator.call(this, db, options)
   this._limit   = options.limit
 
   if (this._limit === -1)
