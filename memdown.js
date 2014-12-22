@@ -1,6 +1,8 @@
 var inherits          = require('inherits')
   , AbstractLevelDOWN = require('abstract-nosql').AbstractLevelDOWN
   , AbstractIterator  = require('abstract-nosql').AbstractIterator
+  , Errors  = require('abstract-object/Error')
+  , NotFoundError = Errors.NotFoundError
   , ltgt              = require('ltgt')
   , setImmediate      = global.setImmediate || process.nextTick
   , createRBT = require('functional-red-black-tree')
@@ -195,7 +197,7 @@ MemDOWN.prototype._getSync = function (key, options) {
 
   if (value === undefined) {
     // 'NotFound' error, consistent with LevelDOWN API
-    var err = new Error('NotFound')
+    var err = new NotFoundError()
     throw err
   }
 
@@ -210,7 +212,7 @@ MemDOWN.prototype._get = function (key, options, callback) {
 
   if (value === undefined) {
     // 'NotFound' error, consistent with LevelDOWN API
-    var err = new Error('NotFound')
+    var err = new NotFoundError()
     return setImmediate(function callNext() { callback(err) })
   }
 
