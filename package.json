@@ -1,7 +1,7 @@
 {
   "name": "memdown-sync",
   "description": "An drop-in replacement for LevelDOWN that works in memory only with sync supports",
-  "version": "1.4.2",
+  "version": "1.5.0",
   "homepage": "https://github.com/snowyu/node-memdown-sync",
   "contributors": [
     "Riceball LEE <snowyu.lee@gmail.com> (https://github.com/snowyu)",
@@ -21,12 +21,11 @@
     "url": "https://github.com/snowyu/node-memdown-sync.git"
   },
   "dependencies": {
-    "abstract-nosql": "~1.8.0",
-    "abstract-object": "~1.2.2",
+    "abstract-nosql": "1.x",
+    "abstract-object": "1.x",
     "functional-red-black-tree": "~1.0.1",
-    "inherits": "~2.0.1",
     "ltgt": "~1.0.2",
-    "nosql-stream": "~1.1.0"
+    "nosql-stream": "1.x"
   },
   "devDependencies": {
     "bench": "*",
