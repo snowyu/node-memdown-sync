@@ -1,4 +1,5 @@
-var inherits          = require('inherits')
+var util              = require('abstract-object/util')
+  , inherits          = util.inherits
   , AbstractLevelDOWN = require('abstract-nosql').AbstractLevelDOWN
   , AbstractIterator  = require('abstract-nosql').AbstractIterator
   , Errors  = require('abstract-object/Error')
