@@ -1,7 +1,7 @@
 {
   "name": "memdown-sync",
   "description": "An drop-in replacement for LevelDOWN that works in memory only with sync supports",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "homepage": "https://github.com/snowyu/node-memdown-sync",
   "contributors": [
     "Riceball LEE <snowyu.lee@gmail.com> (https://github.com/snowyu)",
