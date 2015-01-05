@@ -21,8 +21,9 @@
     "url": "https://github.com/snowyu/node-memdown-sync.git"
   },
   "dependencies": {
-    "abstract-nosql": "1.x",
-    "abstract-object": "1.x",
+    "abstract-iterator": ">=0.11.1",
+    "abstract-nosql": ">=1.2.0",
+    "abstract-object": ">=1.4.0",
     "functional-red-black-tree": "~1.0.1",
     "ltgt": "~1.0.2",
     "nosql-stream": "1.x"

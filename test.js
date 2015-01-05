@@ -2,9 +2,11 @@ var test       = require('tape')
   , util       = require('abstract-object')
   , testCommon = require('abstract-nosql/testCommon')
   , MemDOWN    = require('./')
+  //, Encoding   = require('nosql-encoding')
   //, AbstractIterator = require('./').AbstractIterator
   , testBuffer = require('./testdata_b64')
 
+//MemDOWN=Encoding(MemDOWN)
 /*** compatibility with basic LevelDOWN API ***/
 
 // meh require('abstract-nosql/abstract/leveldown-test').args(MemDOWN, test, testCommon)
@@ -70,9 +72,9 @@ require('abstract-nosql/abstract/chained-batch-test').all(MemDOWN, test, testCom
 
 require('abstract-nosql/abstract/close-test').close(MemDOWN, test, testCommon)
 
-require('abstract-nosql/abstract/iterator-test').all(MemDOWN, test, testCommon)
+require('abstract-iterator/abstract/iterator-test').all(MemDOWN, test, testCommon)
 
-require('abstract-nosql/abstract/ranges-test').all(MemDOWN, test, testCommon)
+require('abstract-iterator/abstract/ranges-test').all(MemDOWN, test, testCommon)
 
 require('./test-memDOWN.js').all(test, testCommon)
 

@@ -1,7 +1,7 @@
 var util              = require('abstract-object/util')
   , inherits          = util.inherits
-  , AbstractLevelDOWN = require('abstract-nosql').AbstractLevelDOWN
-  , AbstractIterator  = require('abstract-nosql').AbstractIterator
+  , AbstractLevelDOWN = require('abstract-nosql')
+  , AbstractIterator  = require('abstract-iterator')
   , Errors  = require('abstract-object/Error')
   , NotFoundError = Errors.NotFoundError
   , ltgt              = require('ltgt')
@@ -32,6 +32,7 @@ function lte(value) {
 
 function MemIterator (db, options) {
   AbstractIterator.call(this, db, options)
+  options = this.options
   this._limit   = options.limit
 
   if (this._limit === -1)
@@ -42,7 +43,7 @@ function MemIterator (db, options) {
   this.keyAsBuffer = options.keyAsBuffer === true
   this.valueAsBuffer = options.valueAsBuffer === true
   this._reverse   = options.reverse
-  this._options = options
+  //this._options = options
   this._done = 0
   
   if (!this._reverse) {
