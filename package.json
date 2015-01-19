@@ -1,8 +1,8 @@
 {
-  "name": "memdown-sync",
-  "description": "An drop-in replacement for LevelDOWN that works in memory only with sync supports",
+  "name": "nosql-memdb",
+  "description": "Nosql database that works in memory only inherits from abstract-nosql",
   "version": "2.0.0",
-  "homepage": "https://github.com/snowyu/node-memdown-sync",
+  "homepage": "https://github.com/snowyu/node-nosql-memdb",
   "contributors": [
     "Riceball LEE <snowyu.lee@gmail.com> (https://github.com/snowyu)",
     "Rod Vagg <rod@vagg.org> (https://github.com/rvagg)",
@@ -11,15 +11,15 @@
   "keywords": [
     "abstract-nosql",
     "nosql",
-    "leveldb",
-    "leveldown",
-    "levelup",
+    "database",
+    "data",
+    "store",
     "memory"
   ],
   "main": "./memdown.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/snowyu/node-memdown-sync.git"
+    "url": "https://github.com/snowyu/node-nosql-memdb.git"
   },
   "dependencies": {
     "abstract-iterator": ">=0.11.2",

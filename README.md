@@ -1,10 +1,5 @@
-# MemDOWN with sync supports
+# Nosql MemDB [![Build Status](https://img.shields.io/travis/snowyu/node-nosql-memdb/master.svg)](http://travis-ci.org/snowyu/node-nosql-memdb) [![npm](https://img.shields.io/npm/v/nosql-memdb.svg)](https://npmjs.org/package/nosql-memdb) [![downloads](https://img.shields.io/npm/dm/nosql-memdb.svg)](https://npmjs.org/package/nosql-memdb) [![license](https://img.shields.io/npm/l/nosql-memdb.svg)](https://npmjs.org/package/nosql-memdb) 
 
-
-
-[![NPM](https://nodei.co/npm/memdown-sync.png?downloads=true)](https://nodei.co/npm/memdown-sync/)
-
-[![Travis](https://secure.travis-ci.org/snowyu/node-memdown-sync.png)](http://travis-ci.org/snowyu/node-memdown-sync)
 
 ## Chnages
 
@@ -18,6 +13,7 @@
 ### v1.x.x
 
 + Add the AbstractError and error code supports.
++ Add the synchronous methods supports.
 * see [abstract-nosql](https://github.com/snowyu/node-abstract-nosql) to more details.
 
 ## Example
