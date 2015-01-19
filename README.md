@@ -20,7 +20,7 @@
 
 ```js
 var addStreamTo = require('nosql-stream')
-var MemDB = addStreamTo(require('memdown-sync'))
+var MemDB = addStreamTo(require('nosql-memdb'))
 var db = MemDB()
 
 db.open()
