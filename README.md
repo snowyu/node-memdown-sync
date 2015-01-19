@@ -1,19 +1,33 @@
 # MemDOWN with sync supports
 
-**A drop-in replacement for [LevelDOWN](https://github.com/rvagg/node-leveldown) that works in memory only. Can be used as a back-end for [LevelUP](https://github.com/rvagg/node-levelup) rather than an actual LevelDB store.**
+
 
 [![NPM](https://nodei.co/npm/memdown-sync.png?downloads=true)](https://nodei.co/npm/memdown-sync/)
 
 [![Travis](https://secure.travis-ci.org/snowyu/node-memdown-sync.png)](http://travis-ci.org/snowyu/node-memdown-sync)
 
+## Chnages
 
-As of version 0.7, LevelUP allows you to pass a `'db'` option when you create a new instance. This will override the default LevelDOWN store with a LevelDOWN API compatible object. MemDOWN conforms exactly to the LevelDOWN API but only performs operations in memory, so your data is discarded when the process ends or you release a reference to the database.
+### v2.x.x
+
++ the modularization(feature plugin) with [abstract-nosql](https://github.com/snowyu/node-abstract-nosql)
+- (`broken changes`) remove the streamable feature from buildin. this is a plugin now.
+- (`broken change`) defaults to disable asBuffer option.
+  * pls use the `getBuffer` method to get as buffer.
+
+### v1.x.x
+
++ Add the AbstractError and error code supports.
+* see [abstract-nosql](https://github.com/snowyu/node-abstract-nosql) to more details.
 
 ## Example
 
 ```js
-var levelup = require('levelup')
-  , db = levelup('/does/not/matter', { db: require('memdown') })
+var addStreamTo = require('nosql-stream')
+var MemDB = addStreamTo(require('memdown-sync'))
+var db = MemDB()
+
+db.open()
 
 db.put('name', 'Yuri Irsenovich Kim')
 db.put('dob', '16 February 1941')
@@ -39,4 +53,4 @@ Show's over folks!
 
 ## Licence
 
-MemDOWN is Copyright (c) 2013 Rod Vagg [@rvagg](https://twitter.com/rvagg) and licensed under the MIT licence. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE file for more details.
+MemDOWN is Copyright (c) 2013 Rod Vagg [@rvagg](https://twitter.com/rvagg), and contributors and licensed under the MIT licence. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE file for more details.
