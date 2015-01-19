@@ -49,4 +49,6 @@ Show's over folks!
 
 ## Licence
 
-MemDOWN is Copyright (c) 2013 Rod Vagg [@rvagg](https://twitter.com/rvagg), and contributors and licensed under the MIT licence. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE file for more details.
+MemDOWN is Copyright (c) 2013 Rod Vagg [@rvagg](https://twitter.com/rvagg) and licensed under the MIT licence. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE file for more details.
+Nosql-MemDB is Copyright (c) 2015 Riceball LEE [@riceball](https://github.com/snowyu) and its contributors.
+
