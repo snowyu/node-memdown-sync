@@ -1,7 +1,7 @@
 {
   "name": "nosql-memdb",
   "description": "Nosql database that works in memory only inherits from abstract-nosql",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "homepage": "https://github.com/snowyu/node-nosql-memdb",
   "contributors": [
     "Riceball LEE <snowyu.lee@gmail.com> (https://github.com/snowyu)",
