@@ -134,7 +134,7 @@ function MemDOWN (location) {
 
 inherits(MemDOWN, AbstractLevelDOWN)
 
-MemDOWN.prototype['final'] = function() {
+MemDOWN.prototype.finalize = function() {
   if (this._store !== this) delete globalStore[this._location]
 }
 

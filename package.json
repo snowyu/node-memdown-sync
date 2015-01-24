@@ -23,8 +23,8 @@
   },
   "dependencies": {
     "abstract-iterator": ">=0.11.3",
-    "abstract-nosql": ">=2.0.0",
-    "abstract-object": ">=1.6.1",
+    "abstract-nosql": "~2.0.1",
+    "abstract-object": "~1.7.0",
     "functional-red-black-tree": "~1.0.1",
     "ltgt": "~1.0.2"
   },
