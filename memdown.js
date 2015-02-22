@@ -1,7 +1,7 @@
-var inherits          = require('abstract-object/lib/util/inherits')
+var inherits          = require('inherits-ex')
   , AbstractLevelDOWN = require('abstract-nosql')
   , AbstractIterator  = require('abstract-iterator')
-  , Errors  = require('abstract-object/Error')
+  , Errors  = require('abstract-error')
   , NotFoundError = Errors.NotFoundError
   , ltgt              = require('ltgt')
   , setImmediate      = global.setImmediate || process.nextTick
