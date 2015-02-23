@@ -37,6 +37,6 @@ require('abstract-iterator/abstract/iterator-test').all(MemDOWN, test, testCommo
 
 require('abstract-iterator/abstract/ranges-test').all(MemDOWN, test, testCommon)
 
-require('./test-memDOWN.js').all(test, testCommon)
+require('./test-memdb.js').all(test, testCommon)
 
 require('./test-event.js')
