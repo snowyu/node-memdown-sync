@@ -1,19 +1,19 @@
 var test       = require('tape')
   , testCommon = require('abstract-nosql/testCommon')
-  , MemDOWN    = require('./')
+  , MemDB    = require('./')
   , testBuffer = require('./testdata_b64')
 
 module.exports.all = function (test, testCommon) {
-  
+
 //
 // TODO: destroy() test copied from localstorage-down
 // https://github.com/pouchdb/pouchdb/blob/master/lib/adapters/leveldb.js#L1019
 // move this test to abstract-nosql
-// 
+//
 
 test('test .destroy', function (t) {
-  var db = new MemDOWN('destroy-test')
-  var db2 = new MemDOWN('other-db')
+  var db = new MemDB('destroy-test')
+  var db2 = new MemDB('other-db')
   db2.put('key2', 'value2', function (err) {
     t.notOk(err, 'no error')
     db.put('key', 'value', function (err) {
@@ -25,10 +25,10 @@ test('test .destroy', function (t) {
           t.notOk(err, 'no error')
           db2.close(function (err) {
             t.notOk(err, 'no error')
-            MemDOWN.destroy('destroy-test', function (err) {
+            MemDB.destroy('destroy-test', function (err) {
               t.notOk(err, 'no error')
-              var db3 = new MemDOWN('destroy-test')
-              var db4 = new MemDOWN('other-db')
+              var db3 = new MemDB('destroy-test')
+              var db4 = new MemDB('other-db')
               db3.get('key', function (err, value) {
                 t.ok(err, 'key is not there')
                 db4.get('key2', {asBuffer: false}, function (err, value) {
@@ -46,7 +46,7 @@ test('test .destroy', function (t) {
 })
 
 test('unsorted entry, sorted iterator', function (t) {
-  var db = new MemDOWN('foo')
+  var db = new MemDB('foo')
     , noop = function () {}
   db.open()
   db.put('f', 'F')
@@ -76,7 +76,7 @@ test('unsorted entry, sorted iterator', function (t) {
 })
 
 test('reading while putting', function (t) {
-  var db = new MemDOWN('foo2')
+  var db = new MemDB('foo2')
     , noop = function () {}
     , iterator
   db.open()
@@ -98,7 +98,7 @@ test('reading while putting', function (t) {
 
 
 test('reading while deleting', function (t) {
-  var db = new MemDOWN('foo3')
+  var db = new MemDB('foo3')
     , noop = function () {}
     , iterator
   db.open()
@@ -120,7 +120,7 @@ test('reading while deleting', function (t) {
 })
 
 test('reverse ranges', function(t) {
-  var db = new MemDOWN('foo4')
+  var db = new MemDB('foo4')
     , noop = function () {}
     , iterator
   db.open(noop)
@@ -135,7 +135,7 @@ test('reverse ranges', function(t) {
 })
 
 test('no location', function(t) {
-  var db = new MemDOWN()
+  var db = new MemDB()
     , noerr = function (err) {
       t.error(err, 'opens crrectly')
     }
@@ -153,7 +153,7 @@ test('no location', function(t) {
 })
 
 test('delete while iterating', function(t) {
-  var db = new MemDOWN()
+  var db = new MemDB()
     , noerr = function (err) {
       t.error(err, 'opens crrectly')
     }
@@ -181,5 +181,3 @@ test('delete while iterating', function(t) {
 }
 
 //module.exports.all(test, testCommon)
-
-
