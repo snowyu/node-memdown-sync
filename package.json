@@ -2,7 +2,7 @@
   "name": "nosql-memdb",
   "description": "Nosql database that works in memory only inherits from abstract-nosql",
   "version": "3.0.0",
-  "homepage": "https://github.com/snowyu/node-nosql-memdb",
+  "homepage": "https://github.com/snowyu/nosql-memdb",
   "contributors": [
     "Riceball LEE <snowyu.lee@gmail.com> (https://github.com/snowyu)",
     "Rod Vagg <rod@vagg.org> (https://github.com/rvagg)",
@@ -20,7 +20,7 @@
   "main": "./memdown.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/snowyu/node-nosql-memdb.git"
+    "url": "https://github.com/snowyu/nosql-memdb.git"
   },
   "dependencies": {
     "abstract-error": "^1.0.2",
