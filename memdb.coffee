@@ -37,10 +37,10 @@ class MemIterator
       @_incr = 'next'
       @_start = ltgt.lowerBound(options)
       @_endValue = ltgt.upperBound(options)
-      if typeof @_start == 'undefined'
+      if @_start == null
         @_tree = tree.begin
-        if options.gt == null
-          @_tree.next()
+        # if options.gt == null
+        #   @_tree.next()
       else if ltgt.lowerBoundInclusive(options)
         @_tree = tree.ge(@_start)
       else
@@ -54,10 +54,10 @@ class MemIterator
       @_incr = 'prev'
       @_start = ltgt.upperBound(options)
       @_endValue = ltgt.lowerBound(options)
-      if typeof @_start == 'undefined'
+      if @_start == null
         @_tree = tree.end
-        if options.lt == null
-          @_tree.prev()
+        # if options.lt == null
+        #   @_tree.prev()
       else if ltgt.upperBoundInclusive(options)
         @_tree = tree.le(@_start)
       else

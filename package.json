@@ -1,7 +1,7 @@
 {
   "name": "nosql-memdb",
   "description": "Nosql database that works in memory only inherits from abstract-nosql",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "homepage": "https://github.com/snowyu/node-nosql-memdb",
   "contributors": [
     "Riceball LEE <snowyu.lee@gmail.com> (https://github.com/snowyu)",
@@ -23,16 +23,17 @@
     "url": "https://github.com/snowyu/node-nosql-memdb.git"
   },
   "dependencies": {
-    "abstract-error": "^1.0.1",
-    "abstract-iterator": ">=0.11.5",
-    "abstract-nosql": "~2.1.0",
+    "abstract-error": "^1.0.2",
+    "abstract-iterator": ">=3.0.0",
+    "abstract-nosql": "^3.0.0",
     "functional-red-black-tree": "~1.0.1",
-    "inherits-ex": "^1.0.6",
-    "ltgt": "~1.0.2"
+    "inherits-ex": "^1.2.0",
+    "ltgt": "~2.2.0"
   },
   "devDependencies": {
     "bench": "*",
-    "events-ex": "^1.1.2",
+    "coffee-script": "^1.12.7",
+    "events-ex": "^1.1.5",
     "faucet": "*",
     "rimraf": "*",
     "tape": "*"
